@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Structure Guide
+
+This project is a modern AI image generation web app built with Next.js, Vercel AI SDK, and Fal. Below is an overview of the main structure and key files:
+
+## Main Directories & Files
+
+- [app/](mdc:app): Next.js App Router directory. Contains `layout.tsx` (root layout) and `page.tsx` (main page entry).
+- [components/](mdc:components): All React UI and logic components, including:
+  - [Header.tsx](mdc:components/Header.tsx): The main header/navigation bar.
+  - [ImagePlayground.tsx](mdc:components/ImagePlayground.tsx): The main image generation playground.
+  - [ImageCarousel.tsx](mdc:components/ImageCarousel.tsx): Carousel for displaying generated images.
+  - [PromptInput.tsx](mdc:components/PromptInput.tsx): Prompt input and suggestion UI.
+  - [ui/](mdc:components/ui): Reusable UI primitives (Button, Card, Spinner, etc).
+- [lib/](mdc:lib): Utility functions and configuration, such as:
+  - [provider-config.ts](mdc:lib/provider-config.ts): AI provider/model configuration.
+  - [suggestions.ts](mdc:lib/suggestions.ts): Prompt suggestion logic.
+  - [utils.ts](mdc:lib/utils.ts): General utilities.
+- [hooks/](mdc:hooks): Custom React hooks, e.g. [use-image-generation.ts](mdc:hooks/use-image-generation.ts) for image generation logic.
+- [public/](mdc:public): Static assets (images, fonts, etc).
+- [tailwind.config.ts](mdc:tailwind.config.ts): Tailwind CSS configuration.
+- [package.json](mdc:package.json): Project dependencies and scripts.
+- [README.md](mdc:README.md): Project overview, features, and setup instructions.
+
+## Key Points
+- Uses Next.js 15 App Router for routing and layout.
+- UI is built with shadcn/ui and Tailwind CSS.
+- Integrates Vercel AI SDK and Fal for multi-model image generation.
+- All business logic is componentized and reusable.
+- Environment variables are managed via `.env.local` (see README for setup).
+
+For more details, see the referenced files above.
